@@ -1,0 +1,33 @@
+# Node dependencies
+**/node_modules/
+
+# Build outputs
+submission/artifacts/
+submission/cache/
+submission/build-info/
+submission/frontend/dist/
+submission/frontend/.vite/
+submission/frontend/.eslintcache
+
+# Environment files
+.env
+*.env
+!.env.example
+submission/.env
+submission/frontend/.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.log
+
+# Coverage and reports
+coverage/
+submission/coverage/
+
+# Editor and OS cruft
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

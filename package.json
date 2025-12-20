@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "hardhat": "^3.1.0"
+  },
+  "name": "erc20-faucet-dapp-23a91a1220",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Charan-guggilapu123/Erc20-faucet-dapp-23A91A1220.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Charan-guggilapu123/Erc20-faucet-dapp-23A91A1220/issues"
+  },
+  "homepage": "https://github.com/Charan-guggilapu123/Erc20-faucet-dapp-23A91A1220#readme"
+}

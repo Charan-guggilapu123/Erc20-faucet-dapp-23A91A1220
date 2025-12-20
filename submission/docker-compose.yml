@@ -1,0 +1,16 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        - VITE_RPC_URL=${VITE_RPC_URL}
+        - VITE_TOKEN_ADDRESS=${VITE_TOKEN_ADDRESS}
+        - VITE_FAUCET_ADDRESS=${VITE_FAUCET_ADDRESS}
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+      interval: 10s
+      retries: 3
