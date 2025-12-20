@@ -9,13 +9,13 @@ End-to-end Web3 faucet demonstrating ERC-20 token minting, cooldown + lifetime l
 
 ```mermaid
 flowchart TD
-	Browser[User Wallet + Browser] -- EIP-1193 / ethers.js --> Frontend[React App]
-	Frontend -- JSON-RPC --> RPC[Sepolia RPC]
-	RPC --> Faucet[TokenFaucet]
-	RPC --> Token[FaucetToken (ERC20)]
-	Faucet -- mint() --> Token
-	Faucet -. events .-> Frontend
-	Token -. Transfer events .-> Frontend
+  Browser[User Wallet + Browser] -->|EIP-1193 / ethers.js| Frontend[React App]
+  Frontend -->|JSON-RPC| RPC[Sepolia RPC]
+  RPC --> Faucet[TokenFaucet]
+  RPC --> Token[FaucetToken (ERC20)]
+  Faucet -->|mint()| Token
+  Faucet -.->|events| Frontend
+  Token -.->|Transfer events| Frontend
 ```
 
 ## Deployed Contracts (Sepolia)
