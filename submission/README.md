@@ -7,8 +7,6 @@ End-to-end Web3 faucet demonstrating ERC-20 token minting, cooldown + lifetime l
 - Frontend: React + Vite + ethers; evaluation API exposed on `window.__EVAL__`.
 - DevOps: Dockerized frontend served via Express with `/health` endpoint; env-driven RPC and addresses.
 
-Mermaid diagram (source: [diagrams/architecture.mmd](diagrams/architecture.mmd)):
-
 ```mermaid
 flowchart TD
 	Browser[User Wallet + Browser] -- EIP-1193 / ethers.js --> Frontend[React App]
