@@ -117,3 +117,13 @@ await window.__EVAL__.requestTokens(); // returns tx hash after confirmation
 - Update README with actual deployed Sepolia addresses + Etherscan verification links.
 - Optional: add on-chain event listeners to auto-refresh without polling.
 
+## Troubleshooting
+- Stale UI (“Practice” page): If the browser shows an unrelated page, it’s usually cached content or a service worker from a different app on the same origin.
+	- Open an incognito/private window and visit http://localhost:3000.
+	- In DevTools → Application → Service Workers: Unregister any worker for `localhost:3000`.
+	- In DevTools → Application → Clear Storage: select all and “Clear site data”. Then hard-reload with cache disabled.
+	- Confirm View Source shows the bundle referenced as `/assets/index-*.js` (e.g., `index-BnPak1t_.js`).
+	- Ensure only the `submission-frontend-1` container is bound to port 3000 (`docker ps`). If needed, `docker compose down && docker compose up -d --build`.
+- Frontend cannot connect wallet: Make sure a Web3 wallet (e.g., MetaMask) is installed and on Sepolia. If using a remote RPC for frontend (`VITE_RPC_URL`), verify it’s reachable.
+- Hardhat deploy errors: Check `.env` secrets and that `SEPOLIA_RPC_URL` is valid; verify account has Sepolia ETH; re-run `npx hardhat compile`.
+
