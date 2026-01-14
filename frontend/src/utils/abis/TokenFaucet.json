@@ -1,0 +1,67 @@
+[
+  {
+    "inputs": [{"internalType":"address","name":"tokenAddress","type":"address"}],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [],
+    "name":"requestTokens",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{"internalType":"address","name":"user","type":"address"}],
+    "name":"canClaim",
+    "outputs": [{"internalType":"bool","name":"","type":"bool"}],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{"internalType":"address","name":"user","type":"address"}],
+    "name":"remainingAllowance",
+    "outputs": [{"internalType":"uint256","name":"","type":"uint256"}],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name":"isPaused",
+    "outputs": [{"internalType":"bool","name":"","type":"bool"}],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{"internalType":"address","name":"","type":"address"}],
+    "name":"lastClaimAt",
+    "outputs": [{"internalType":"uint256","name":"","type":"uint256"}],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{"internalType":"address","name":"","type":"address"}],
+    "name":"totalClaimed",
+    "outputs": [{"internalType":"uint256","name":"","type":"uint256"}],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {"indexed": true, "internalType":"address","name":"user","type":"address"},
+      {"indexed": false, "internalType":"uint256","name":"amount","type":"uint256"},
+      {"indexed": false, "internalType":"uint256","name":"timestamp","type":"uint256"}
+    ],
+    "name":"TokensClaimed",
+    "type":"event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {"indexed": false, "internalType":"bool","name":"paused","type":"bool"}
+    ],
+    "name":"FaucetPaused",
+    "type":"event"
+  }
+]
